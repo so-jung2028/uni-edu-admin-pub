@@ -1,0 +1,178 @@
+@charset "UTF-8";
+ 
+/*
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+*/
+
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 45 920;
+	font-style: normal;
+	font-display: swap;
+	src:url("/assets/font/PretendardVariable.woff2") format('woff2-variations');
+}
+
+/* Material icon */
+@font-face {
+  font-family: 'Material Symbols Rounded';
+  font-style: normal;
+  font-weight: 100 700; /* 지원하는 최소-최대 굵기 */
+  src: url("/assets/font/MaterialSymbolsRounded.woff2") format('woff2');
+}
+
+.material-symbols-rounded {
+  font-family: 'Material Symbols Rounded';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  vertical-align:middle;
+  line-height:1.2;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* WebKit 브라우저 렌더링 최적화 */
+  -webkit-font-smoothing: antialiased;
+  /* Chrome, Safari, Opera */
+  text-rendering: optimizeLegibility;
+  /* Firefox */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 디자인 시스템 (CSS Variables) */
+:root {
+    /* Neutral Colors */
+    --neutral_0:#fff; 
+    --neutral_100:#fafafa;
+    --neutral_200:#f2f4fc;
+    --neutral_300:#e4e7f1;
+    --neutral_500:#b1b9cf;
+    --neutral_600:#888;
+    --neutral_800:#414656;
+    --neutral_900:#111;
+
+    /* Primary & System Colors */ 
+    --primary_100:#eef4ff; 
+    --primary_300:#7da6ff; 
+    --primary_500:#326cf9;
+    --primary_600:#2553cc;
+    --primary_700:#1c3e99;
+    --primary_800:#142b66;
+    --primary_900:#122152;
+    --error_color:#ef4444;
+    --warning_color:#eab308;
+    --success_color:#16a34a;
+
+    --border_color:#dee2e6; /* 경계선 색상 */
+    --form_borderColor:#dee2e6; /* 폼 보더 색상 */
+    --card_bg:#fff; /* 카드 배경 */
+
+    /* font size */
+    --font_small:12px;
+    --font_base:14px;
+    --font_medium:16px;
+    --font_large:18px;
+    --font_xlarge:28px;
+
+    /* border-radius */
+    --borderRadius:4px;
+    --borderRadius_2:8px;
+
+    --shadow_light:2px 3px 2px rgba(0,0,0,.1);
+}
+
+/* 기본 스타일 초기화 및 폰트 설정 */
+* { box-sizing:border-box; margin:0; padding:0; }
+body { color:var(--textDark); background-color:var(--bgLight); font-size:var(--font_base); margin:0; padding:0; overflow-x:auto; }
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button,a { font-family:"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size:14px; line-height:1.5; color:var(--neutral_900); font-weight:400; }
+dl,ul,ol,menu,li { list-style:none; }
+img { border:0; height:auto; line-height:100%; vertical-align:top; outline:none; text-decoration:none; }
+iframe { border:0; margin:0; padding:0; }
+.icon_fill { font-variation-settings:'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24 }
+
+button { border:none; cursor:pointer; font-weight:500; transition:all .2s; background:var(--neutral_0)}
+input::placeholder,textarea::placeholder { color:var(--neutral_600); }
+input[type="text"],input[type="tel"],input[type="password"],input[type="file"],input[type="number"],input[type="email"],input[type="date"],input[type="search"],textarea,select { border:1px solid var(--neutral_500); height:32px; vertical-align:middle; padding:0 16px; border-radius:var(--borderRadius); }
+input:disabled,textarea:disabled,input:read-only, textarea:read-only { background-color:var(--neutral_300); color:var(--neutral_600); }
+input[type=text]:focus,input[type=password]:focus,textarea:focus,input[type=tel]:focus,select:focus,input[type=number]:focus { border:1px solid var(--neutral_800); outline:transparent; color:var(--neutral_900); }
+input[type="checkbox"],input[type="radio"] { width:16px; height:16px; margin-right:8px; vertical-align:middle; cursor:pointer; accent-color:var(--primary_500); }
+select { appearance:none; background:#fff url(../images/select_arrow.png) no-repeat calc(100% - 12px) center; padding-right:40px; cursor:pointer; color:var(--neutral_600); }
+input[type="date"] { color:var(--neutral_600); }
+select:disabled { background-color:var(--neutral_300); cursor:not-allowed; }
+select:focus { border:1px solid var(--neutral_800); outline:transparent; }
+label { cursor:pointer; }
+input:disabled,textarea:disabled,input:disabled+label,textarea:disabled+label { cursor:not-allowed; }
+
+table { position:relative; max-width:none;	width:auto; min-width:100%; width:100%;border-collapse:collapse; border:0; border-spacing:0; }
+caption, legend { text-indent:-9999px; overflow:hidden; height:0; }
+address { font-style:normal; }
+a { text-decoration:none; transition:all .2s; }
+a:hover { color:var(--primary_600); }
+
+/* 색상 팔레트 */
+.neutral_0 { background-color:var(--neutral_0); }
+.neutral_100 { background-color:var(--neutral_100); }
+.neutral_200 { background-color:var(--neutral_200); }
+.neutral_300 { background-color:var(--neutral_300); }
+.neutral_500 { background-color:var(--neutral_500); }
+.neutral_600 { background-color:var(--neutral_600); }
+.neutral_800 { background-color:var(--neutral_800); }
+.neutral_900 { background-color:var(--neutral_900); }
+.primary_100 { background-color:var(--primary_100); }
+.primary_300 { background-color:var(--primary_300); }
+.primary_500 { background-color:var(--primary_500); }
+.primary_600 { background-color:var(--primary_600); }
+.primary_700 { background-color:var(--primary_700); }
+.primary_800 { background-color:var(--primary_800); }
+.primary_900 { background-color:var(--primary_900); }
+.error_color { background-color:var(--error_color); }
+.warning_color { background-color:var(--warning_color); }
+.success_color { background-color:var(--success_color); }
+.end_color { background-color:var(--primary_500); }
+.temporary_color { background-color:var(--neutral_600); }
+
+/*폰트 컬러 */
+.txtNeutral_0 { color:var(--neutral_0); }
+.txtNeutral_100 { color:var(--neutral_100); }
+.txtNeutral_300 { color:var(--neutral_300); }
+.txtNeutral_600 { color:var(--neutral_600); }
+.txtNeutral_800 { color:var(--neutral_800); }
+.txtNeutral_900 { color:var(--neutral_900); }
+.txtPrimary_100 { color:var(--primary_100); }
+.txtPrimary_500 { color:var(--primary_500); }
+.txtPrimary_600 { color:var(--primary_600); }
+.txtPrimary_700 { color:var(--primary_700); }
+.txtPrimary_800 { color:var(--primary_800); }
+.txtError_color { color:var(--error_color); }
+.txtWarning_color { color:var(--warning_color); }
+.txtSuccess_color { color:var(--success_color); }
+.txtEnd_color { color:var(--primary_500); }
+.txtTemporary_color { color:var(--neutral_600); }
+
+
+/* 폰트 사이즈 */
+.base_400 { font-size:var(--font_base); }
+.base_500 { font-size:var(--font_base); font-weight:500; }
+.base_600 { font-size:var(--font_base); font-weight:600; }
+.small_400 { font-size:var(--font_small); }
+.small_500 { font-size:var(--font_small); font-weight:500; }
+.medium_500 { font-size:var(--font_medium); font-weight:500; }
+.medium_600 { font-size:var(--font_medium); font-weight:600; }
+.large_500 { font-size:var(--font_large); font-weight:500; }
+.large_600 { font-size:var(--font_large); font-weight:600; }
+.large_700 { font-size:var(--font_large); font-weight:700; }
+.xlarge_700 { font-size:var(--font_xlarge); font-weight:700; }
+
+/* 텍스트 정렬 */
+.align_left { text-align:left; }
+.align_center { text-align:center; }
+.align_right { text-align:right; }
+
+/* 기본 아이콘 크기 */
+button span.material-symbols-rounded,.material-symbols-rounded.paddingR4  { padding-right:4px; }

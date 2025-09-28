@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600px"/>
+    <title>메가스터디아카데미원격평생교육원</title>
+    <link rel="stylesheet" href="/assets/css/common.css?v=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1.0">
+    <link rel="preload" href="/assets/font/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+<body>
+    <p class="skip_navi"><a href="#container">본문 바로가기</a></p><!-- skip navigation -->
+
+   <div class="admin_wrapper" id="wrapper">
+
+        <!-- Header -->
+        <header class="admin_header">
+            <h1 class="logo"><img src="/assets/images/logo.png" alt="메가스터디아카데미원격평생교육원"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">사이트관리 </a></li>
+                    <li><a href="#">사용자 관리</a></li>
+                    <li><a href="#">교육과정 관리</a></li>
+                    <li><a href="#">학습운영 관리</a></li>
+                    <li><a href="#">학습현황 관리</a></li>
+                    <li><a href="#">학습지원 관리</a></li>
+                    <li><a href="#" class="active">매출통계 관리</a></li>
+                </ul>
+            </nav>
+            <div class="header_right">
+                <span class="user-info">최고관리자(권한)</span>
+                <button class="material-symbols-rounded icon_fill">settings</button>
+                <button class="btn_logout">로그아웃<span class=" material-symbols-rounded">logout</span></button>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- LNB -->
+        <nav class="admin_lnb">
+            <h2><span class="material-symbols-rounded">incomplete_circle</span>매출통계 관리</h2>
+
+            <!-- lnb 열고 닫기 버튼 -->
+            <button class="toggle_sidebar"></button>
+            <!-- //lnb 열고 닫기 버튼 -->
+             
+            <ul class="sidebar_menu">
+                <li class="active_depth_2"> <!-- 선택 시 active_depth_2 -->
+                    <a href="#">전체 매출관리</a>
+                    <ul class="depth_3">
+                        <li>
+                            <a href="#none" class="active_depth_3">전체매출</a> <!-- 선택 시 active_depth_3 -->
+                             <ul class="depth_4">
+                                <li><a href="#none" class="active_depth_4">신규가입자 수</a></li>
+                                <li><a href="#none">지역별 회원 수</a></li>
+                                <li><a href="#none">가입경로 및 목적</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#none">컨설턴트별 매출</a></li>
+                    </ul>
+                </li>
+                 <li>
+                    <a href="#" class="active">회원통계</a>
+                    <ul class="depth_3">
+                        <li>
+                            <a href="#none">가입자현황</a>
+                            <ul class="depth_4">
+                                <li><a href="#none">신규가입자 수</a></li>
+                                <li><a href="#none">지역별 회원 수</a></li>
+                                <li><a href="#none">가입경로 및 목적</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">학습통계</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">시험통계</a></li>
+                        <li><a href="#none">난이도별 정답률</a></li>
+                    </ul>
+                </li>
+                <li> <!-- 선택 시 active_depth_2 class 추가 -->
+                    <a href="#">운영자보고</a>
+                    <ul class="depth_3">
+                        <li><a href="#none">학습자운영현황보고</a></li> 
+                        <li>
+                            <a href="#none">교수강의평가</a> <!-- 선택 시 active_depth_3 class 추가 -->
+                            <ul class="depth_4">
+                                <li><a href="#none">강의평가명단</a></li>
+                                <li><a href="#none">강의평가문항별통계</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <main class="admin_content" id="container">
+            <header class="content_header">
+                <h2>신규가입자 수</h2>
+
+                <!-- 빵부스러기 -->
+                <ul class="breadcrumb">
+                    <li><a href="#none">홈</a></li>
+                    <li><a href="#none">매출통계 관리</a></li>
+                    <li><a href="#none">전체결제관리</a></li>
+                    <li><a href="#none">전체매출</a></li>
+                    <li>신규가입자 수</li>
+                </ul>
+                <!-- //빵부스러기 -->
+            </header>
+            
+
+            <!-- 검색 섹션 -->
+            <section class="search_section">
+                <dl class="search_box">
+                    <dt>유입경로</dt>
+                    <dd>
+
+                         <!-- 체크 박스 또는 라디오 버튼 -->
+                         <div class="form_group">
+                             <div class="form_check">
+                                 <input type="checkbox" name="chk_1" id="chk_1">
+                                 <label for="chk_1">기본</label>
+                             </div>
+                             <div class="form_check">
+                                 <input type="checkbox" name="chk_1" id="chk_2" checked>
+                                 <label for="chk_2">선택됨</label>
+                             </div>
+                             <div class="form_check">
+                                 <input type="checkbox" name="chk_1" id="chk_3" disabled>
+                                 <label for="chk_3">비활성화</label>
+                             </div>
+                             <div class="form_check">
+                                 <input type="checkbox" name="chk_1" id="chk_4" disabled checked>
+                                 <label for="chk_4">선택된 비활성화</label>
+                             </div>
+                         </div>
+                         <!-- //체크 박스 또는 라디오 버튼 -->
+
+                    </dd>
+                </dl>
+                <dl class="search_box">
+                    <dt>문의과정</dt>
+                    <dd>
+
+                         <!-- 체크 박스 또는 라디오 버튼 -->
+                         <div class="form_group">
+                            <div class="form_check">
+                                <input type="radio" name="radio_1" id="radio_1">
+                                <label for="radio_1">기본</label>
+                            </div>    
+                            <div class="form_check">
+                                 <input type="radio" name="radio_1" id="radio_2" checked>
+                                 <label for="radio_2">선택됨</label>
+                            </div>
+                         </div>
+                         <!-- //체크 박스 또는 라디오 버튼 -->
+
+                    </dd>
+                </dl>
+
+                <dl class="search_box">
+                    <dt>문의과정</dt>
+                    <dd>
+
+                        <!-- 셀렉트박스 -->
+                        <div class="form_group">
+                            <select name="" id="" disabled>
+                                <option value="">선택불가</option>
+                                <option value="">과정1</option>
+                                <option value="">과정2</option>
+                                <option value="">과정3</option>
+                            </select>
+                        </div>
+                        <!-- //셀렉트박스 -->
+
+                    </dd>
+                    <dt>상담여부</dt>
+                    <dd>
+
+                        <!-- 셀렉트박스 -->
+                        <div class="form_group">
+                            <select name="" id="">
+                                <option value="">전체과정</option>
+                                <option value="">과정1</option>
+                                <option value="">과정2</option>
+                                <option value="">과정3</option>
+                            </select>
+                        </div>
+                        <!-- //셀렉트박스 -->
+
+                    </dd>
+                </dl>
+
+                <dl class="search_box">
+                    <dt>기간검색</dt>
+                    <dd>
+
+                        <!-- 캘린더 -->
+                        <div class="form_group calendar">
+                            <input type="date" id="searchStartDate" placeholder="시작일">
+                            <span>~</span>
+                            <input type="date" id="searchEndDate" placeholder="종료일">
+                            <ul class="btn_date_range">
+                                <li><button class="active">당일</button></li>
+                                <li><button>당월</button></li>
+                                <li><button>전일</button></li>
+                                <li><button>전월</button></li>
+                                <li><button>연간</button></li>
+                            </ul>
+                        </div>
+                        <!-- //캘린더 -->
+
+                    </dd>
+                    <dt>상담여부</dt>
+                    <dd>
+
+                        <!-- 셀렉트박스 -->
+                        <div class="form_group">
+                            <select name="" id="">
+                                <option value="">담당자</option>
+                                <option value="">과정1</option>
+                                <option value="">과정2</option>
+                                <option value="">과정3</option>
+                            </select>
+                        </div>
+                        <!-- //셀렉트박스 -->
+
+                    </dd>
+                </dl>
+                <div class="btn_group">
+                    <button>초기화</button>
+                    <button class="btn_search"><span class="material-symbols-rounded">search</span>검색</button>
+                    <button class="btn_openClose"></button>
+                </div>
+            </section>
+            <!-- //검색 섹션 -->
+
+            <!-- 데이터 영역 -->
+
+            <!-- 첫번째 탭 -->
+            <ul class="first_tab">
+                <li><a href="#tab1" class="active">전체</a></li>
+                <li><a href="#tab2">전화/제휴(수기입력 전용)</a></li>
+                <li><a href="#tab3">탭 3</a></li>
+            </ul>
+            <!-- 첫번째 탭 -->
+
+            <div class="table_top">
+                <div class="table_sort">
+                    <select>
+                        <option value="name">이름순</option>
+                        <option value="date">날짜순</option>
+                        <option value="amount">금액순</option>
+                    </select>
+                    <span>총 <strong>1,234</strong>건</span>
+                </div>
+                <div class="table_actions"> 
+                    <button class="icon"><span class="material-symbols-rounded">download</span>엑셀 다운로드</button>
+                    <button>전화등록</button>
+                    <button>제휴 DB 업로드</button>
+                </div>
+            </div>
+
+            <!-- 테이블 -->
+            <table class="data_table">
+                <colgroup>
+                
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>유입경로</th>
+                        <th>문의과정</th>
+                        <th>상담유형</th>
+                        <th>이름</th>
+                        <th>회원여부</th>
+                        <th>전화번호</th>
+                        <th>상담내용</th>
+                        <th>개인정보<br />동의여부</th>
+                        <th>상담여부</th>
+                        <th>담당자</th>
+                        <th>등록자</th>
+                        <th>등록일</th>
+                        <th>처리일</th>
+                        <th>첨부파일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>간편상담</td>
+                        <td>기타</td>
+                        <td>전화전화전화</td>
+                        <td>홍길동</td>
+                        <td>회원</td>
+                        <td>010-222-3333</td>
+                        <td>010-222-3333</td>
+                        <td>무료강의를 들으려고 합니다...</td>
+                        <td>Y</td>
+                        <td>부재중</td>
+                        <td>이순신</td>
+                        <td>안중근</td>
+                        <td>2025-02-22</td>
+                        <td>2025-02-22</td>
+                        <td>
+                            <button class="btn_fileType">JPG</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>간편상담</td>
+                        <td>기타</td>
+                        <td>전화전화전화</td>
+                        <td>홍길동</td>
+                        <td>회원</td>
+                        <td>010-222-3333</td>
+                        <td>010-222-3333</td>
+                        <td>무료강의를 들으려고 합니다...</td>
+                        <td>Y</td>
+                        <td>
+                            <span class="txtError_color">부재중</span>
+                        </td>
+                        <td>이순신</td>
+                        <td>안중근</td>
+                        <td>2025-02-22</td>
+                        <td>2025-02-22</td>
+                        <td>
+                            <button class="btn_fileType">JPG</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>간편상담</td>
+                        <td>기타</td>
+                        <td>전화전화전화</td>
+                        <td>홍길동</td>
+                        <td>회원</td>
+                        <td>010-222-3333</td>
+                        <td>010-222-3333</td>
+                        <td>무료강의를 들으려고 합니다...</td>
+                        <td>Y</td>
+                        <td> <span class="txtEnd_color">완료</span></td>
+                        <td>이순신</td>
+                        <td>안중근</td>
+                        <td>2025-02-22</td>
+                        <td>2025-02-22</td>
+                        <td>
+                            <button class="btn_fileType">JPG</button>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>간편상담</td>
+                        <td>기타</td>
+                        <td>전화전화전화</td>
+                        <td>홍길동</td>
+                        <td>회원</td>
+                        <td>010-222-3333</td>
+                        <td>010-222-3333</td>
+                        <td>무료강의를 들으려고 합니다...</td>
+                        <td>Y</td>
+                        <td> <span class="txtSuccess_color">재통화</span></td>
+                        <td>이순신</td>
+                        <td>안중근</td>
+                        <td>2025-02-22</td>
+                        <td>2025-02-22</td>
+                        <td>
+                            <button class="btn_fileType">JPG</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>간편상담</td>
+                        <td>기타</td>
+                        <td>전화전화전화</td>
+                        <td>홍길동</td>
+                        <td>회원</td>
+                        <td>010-222-3333</td>
+                        <td>010-222-3333</td>
+                        <td>무료강의를 들으려고 합니다...</td>
+                        <td>Y</td>
+                        <td> <span class="txtTemporary_color">임시저장</span></td>
+                        <td>이순신</td>
+                        <td>안중근</td>
+                        <td>2025-02-22</td>
+                        <td>2025-02-22</td>
+                        <td>
+                            <button class="btn_fileType">JPG</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- 페이징 -->
+            <div class="paging">
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_left</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_arrow_left</a>
+				<a href="#none">1</a>
+				<a href="#none" class="active">2</a>
+				<a href="#none">3</a>
+				<a href="#none">4</a>
+				<a href="#none">5</a>
+				<a href="#none" class="material-symbols-rounded">keyboard_arrow_right</a>
+                <a href="#none" class="material-symbols-rounded">keyboard_double_arrow_right</a>
+            </div>
+
+            <!-- //데이터 영역 -->
+
+        </main>
+
+        <!-- footer -->
+        <footer class="admin_footer">
+            <p>copyright ⓒ 2026 메가스터디아카데미원격평생교육원 All right reserved.</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+</html>
